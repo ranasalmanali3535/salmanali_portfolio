@@ -77,12 +77,9 @@ NAVBAR
 
 nav{
     background:linear-gradient(90deg,#d2179e,#a700ff);
-      position:sticky;
-
+    position:sticky;
     top:0;
-
     z-index:1000;
-   
 }
 
 nav ul{
@@ -103,6 +100,52 @@ nav ul li a{
 nav ul li a:hover{
     background:rgba(255,255,255,.15);
 }
+
+/* Menu Icon */
+
+.menu-btn{
+    display:none;
+    color:#fff;
+    font-size:30px;
+    padding:18px 25px;
+    cursor:pointer;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        width:100%;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    nav ul li{
+        text-align:center;
+        border-top:1px solid rgba(255,255,255,.2);
+    }
+
+    nav ul li a{
+        padding:18px;
+    }
+}
+@media (max-width:375px){
+    nav{
+        display: none;
+    }
+   
+}
+
+
 
 /* ==========================
 MAIN
@@ -1022,7 +1065,7 @@ font-size:22px;
 
 .contact-box i{
 
-    width:60px;
+    width:50px;
     height:60px;
     background:#19d7e3;
     color:#111;
@@ -1098,7 +1141,7 @@ font-size:22px;
 .contact-form input,
 .contact-form textarea{
 
-    width:100%;
+    width:80%;
     padding:18px;
     background:#242c4d;
     border:none;
@@ -1106,6 +1149,8 @@ font-size:22px;
     color:white;
     outline:none;
     font-size:16px;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 
@@ -1126,6 +1171,9 @@ font-size:22px;
     font-size:18px;
     font-weight:600;
     transition:.3s;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
