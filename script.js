@@ -217,3 +217,14 @@ function copyEmail() {
 
 
 
+// Menu button ko click karo toh active class toggle hoga
+menuBtn.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+});
+
+// Link click karo toh menu band ho jaye
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+    });
+});
